@@ -18,12 +18,18 @@ class OfflineController
             ->header('Content-Type', 'application/javascript')->header('Cache-Control', 'no-cache');
     }
 
+    public function invoiceClient()
+    {
+        return response(file_get_contents(__DIR__.'/../resources/invoice.js'))
+            ->header('Content-Type', 'application/javascript')->header('Cache-Control', 'no-cache');
+    }
+
     public function worker(Request $request)
     {
         $settings = json_encode([
             'owner' => Identity::owner($request),
             'pages' => config('offline.pages', []),
-            'assets' => array_merge([route('offline.client')], config('offline.assets', [])),
+            'assets' => array_merge([route('offline.client'), route('offline.invoice.client')], config('offline.assets', [])),
         ], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT);
 
         return response('const settings = '.$settings.";\n".file_get_contents(__DIR__.'/../resources/worker.js'))

@@ -1,6 +1,6 @@
 {
   "name": "@kaungsithu883/laravel-offline-tests",
   "private": true,
-  "scripts": { "test": "node tests/client.test.cjs && node tests/worker.test.cjs && node tests/invoice.test.cjs" },
+  "scripts": { "test": "node tests/client.test.cjs && node tests/worker.test.cjs && node tests/bridge.test.cjs && node tests/invoice.test.cjs" },
   "devDependencies": { "fake-indexeddb": "^6.0.0", "jsdom": "^26.0.0" }
 }
