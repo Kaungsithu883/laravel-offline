@@ -1,5 +1,5 @@
 {
-    "name": "sithu/laravel-offline",
+    "name": "kaungsithu883/laravel-offline",
     "description": "Durable browser drafts and idempotent offline form synchronization for Laravel.",
     "keywords": ["laravel", "offline", "pwa", "indexeddb", "idempotency"],
     "homepage": "https://github.com/Kaungsithu883/laravel-offline",

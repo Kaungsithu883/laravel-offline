@@ -12,7 +12,7 @@ validating its payload and returning the success response.
 After the package is registered on Packagist:
 
 ```bash
-composer require sithu/laravel-offline
+composer require kaungsithu883/laravel-offline
 php artisan offline:install
 php artisan migrate
 ```

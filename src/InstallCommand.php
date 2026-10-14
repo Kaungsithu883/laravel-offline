@@ -14,7 +14,7 @@ class InstallCommand extends Command
         $this->call('vendor:publish', ['--tag' => 'offline-config']);
         $this->info('Run php artisan migrate to create the durable receipt tables.');
         $this->line('Add offline.sync to write routes and offline.page to configured offline pages.');
-        $this->line('See vendor/sithu/laravel-offline/README.md for the response contract and browser adapter.');
+        $this->line('See vendor/kaungsithu883/laravel-offline/README.md for the response contract and browser adapter.');
 
         return self::SUCCESS;
     }
